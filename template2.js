@@ -20,11 +20,9 @@ for (let i = 0; i < eduData.length; i++) {
     eduDiv.className = 'eduDiv';
     let templateEdu = `
 <div class="eduDiv">
-    <div class="left-1">
-        <p>${eduData[i].passingYear}</p>
-    </div>
     <div class="right-1">
         <h5>${eduData[i].degree}</h5>
+        <p>${eduData[i].passingYear}</p>
         <p>${eduData[i].sName}</p>
         <p>${eduData[i].fields}</p>
         <p>${eduData[i].grades}</p>

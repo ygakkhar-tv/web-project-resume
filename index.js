@@ -137,6 +137,16 @@ template_btn2.addEventListener('click',() => {
 
 //generate button
 let bool=true;
+
+let fname_state = true;
+let lname_state = true;
+let email_state = true;
+let phone_state = true;
+let linkedin_state = true;
+let github_state = true;
+let address_state = true;
+let about_state = true;
+
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
   bool=true;

@@ -131,7 +131,11 @@ img{
     max-width: 9em;
     border-radius: 50%;
 }
+
 a{
-    text-decoration: none;
     color: black;
+    text-decoration: none;
+}
+a:hover{
+    color:blue;
 }
