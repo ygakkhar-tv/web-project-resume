@@ -26,7 +26,7 @@ textarea{
 
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image:url("/Images/stars.jpg");
+    /* background-image:url("/Images/stars.jpg"); */
 }
 .box{
     display:inline-block;
