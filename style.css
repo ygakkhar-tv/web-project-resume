@@ -1,6 +1,6 @@
 .personal input{
     display: table-cell;
-    width: 300px;
+    width: 80%;
     padding: 3%;
     margin-right:45px;
 }
@@ -28,15 +28,22 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image:url("/Images/stars.jpg");
 }
+.row2{
+ display: grid;
+ grid-template-columns: 50% 50%;
+
+}
 .box{
-    display:inline-block;
-    
+    /* display:inline-block; */
+
+
+    max-width: 90%;
 }
 .box2{
-    display:inline-block;
-    float: right;
-    margin-right: 13%;
-    
+    /* display:inline-block; */
+    /* float: right; */
+    /* margin-right: 13%; */
+    max-width: 90%;
 
     
 }
@@ -47,10 +54,15 @@ body{
     margin-bottom: 20px;
 }
 
-.about textarea{
-    width:100%;
+textarea{
+    width:90%;
     padding: 2%;
-    width: fit-content;
+    resize: none;
+    
+    /* width: fit-content; */
+}
+#about-box{
+    width: 90%;
 }
 
 
