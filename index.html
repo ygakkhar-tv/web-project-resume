@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Resume Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <center><div class="Container">
+      <h1 style="text-align: center;">Resume Generator</h1>
+
+      <div class="personal">
+        <h2 >Personal Info</h2>
+        <div class="row2">
+        <div class="box">
+         
+          <div id="fbox">
+            <label for="f-name">First Name<span>&#42;</span></label>
+            <input type="text" id="f-name" class="per-details" placeholder="Enter here" minlength="4" maxlength="20" required/>
+          </div>
+    
+          <div id="emailbox">
+            <label for="email">Email<span>&#42;</span></label>
+            <input type="email" name="email" id="email" class="per-details" placeholder="Enter your email"   required/>
+          </div>
+          <div id="linkedinbox">
+            <label for="linkedIn">LinkedIn Profile</label>
+            <input type="url" name="linkedIn" id="linkedIn" class="per-details" placeholder="enter url"/>
+          </div>
+          <div id="websitebox">
+            <label for="website">Website</label>
+            <input type="url" name="website" id="website" class="per-details" placeholder="enter url"/>
+          </div>
+
+        </div>
+        <div class="box2">
+          <div id="lbox">
+            <label for="l-name">Last Name<span>&#42;</span></label>
+            <input type="text" id="l-name" class="per-details" placeholder="Enter here"  maxlength="20" required/>
+          </div>
+          <div id="phonebox">
+            <label for="phone">Phone<span>&#42;</span></label>
+            <input type="tel" name="phone" id="phone" class="per-details" placeholder="111-111-1111" maxlength="10" required/> 
+          </div>  
+          <div id="github-box">
+            <label for="github">Github Profile</label>
+            <input type="url" name="github" id="github" class="per-details" placeholder="enter url" />
+          </div>
+          <div id="address-box">
+            <label for="address">Address<span>&#42;</span></label>
+            <input type="text" name="address" id="address" maxlength="80" class="per-details" placeholder="Your address" required/>
+          </div>       
+        </div>
+       
+       
+        </div>
+        
+      </div>
+      <div class="about">
+        <h2>About Me<span>&#42;</span></h2>
+        <div class="box" id="about-box">
+        <textarea name="aboutme" id="aboutme" cols="50" rows="3" placeholder="Describe yourself here..." required></textarea>
+        </div>
+      </div>
+      <div class="education">
+        <h2>Education</h2>
+        <div class="higher-studies">
+  
+          <table class="education-table" id="education-table">
+            <thead id="table-head">
+              <tr>
+                <th>School/College Name<span>&#42;</span></th>
+                <th>Degree/Diploma<span>&#42;</span></th>
+                <th>Field(s) of Study</th>
+                <th>Passing Year<span>&#42;</span></th>
+                <th>Grades<span>&#42;</span></th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr id="data" row="1" class="table-row">
+                <td id="clg-name">
+                  <input type="text" id="college-name" class="college-name-class" placeholder="enter name here" required/>
+                </td>
+                <td>
+                  <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma" required/>
+                </td>
+                <td><input type="text" id="field-name" class="field-name-class" /></td>
+                <td><input type="date" id="year-name" class="year-name-class"/></td>
+                <td>
+                  <input type="text" id="grades" class="grades-class" placeholder="enter your grade" required/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="btn" id="education-btn">
+            <button id="add-education">Add</button>
+            <button id="clear-education">Clear</button>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <div class="skills-data" id="skills-data-1">
+          <div class="box3">
+            <label for="skill-name"></label>
+            <input type="text" id="skill-name" class="skill-name" placeholder="add skill here">
+          </div>
+          <button id="1001" class = "remove" onclick="removeSkill(this)">Clear</button>
+        </div>
+        <div class="btn" id="skills-btn">
+          <button id="add_skills">Add</button> 
+        </div>
+        
+      </div>
+
+      <div class="experience">
+        <h2>Experience</h2>
+        <div class="experience-data" id="experience-data-1">
+          <div class="box3">
+            <label for="from">From</label>
+            <input type="month" name="experience_start_date" id="experience_start_date" class="experience-sdate-class"/>
+            </div>
+            <div class="box3">
+            <label for="Till">Till</label>
+            <input type="month" name="experience_till_date" id="experience_till_date" class="experience-tdate-class"/>
+            </div>
+            <div class="box3">
+            <label for="company name">Company Name</label>
+            <input type="text" name="company name" id="company_name" class="company-name" placeholder="enter company name"/>
+            </div>
+            <button id="100" class = "remove" onclick="removeExperience(this)">X</button>
+          </div>
+          <div class="btn" id="experience-btn">
+            <button id="add_experience">Add</button>
+          </div>
+          
+        </div>
+
+      <div class="Certification">
+        <h2>Certification</h2>
+        <div id="certificate-data-1">
+          <div class="box3">
+            <label for="certification_datte">Certification Date</label>
+          <input type="date" name="Certification_date" id="Certification_datte" class="certificate-date-class" />
+          </div>
+          <div class="box3">
+          <label for="Certification_feild">Certification Field</label>
+          <input type="text" name="Certification_feild" id="Certification_feild" class="certificate-field-class"/>
+          </div>
+          <div class="box3">
+          <label for="Certification_authority">Certification Authority</label>
+          <input type="text" name="Certification_authority" id="Certification_authority" class="certificate-auth-class"/>
+          </div>
+          <button id="1" class = "remove" onclick="removeCertificate(this)">X</button>
+          </div>
+  
+          <div class="btn" id="certification-btn">
+            <button id="add_certificate">Add</button>
+          </div>
+        </div>
+      <div class="btn" id="select-templates">
+        <label for="templates">Choose one template</label>
+        <div id="formid">
+          <button id = "t1" ><img src="/Images/image__1_.png"></button>
+          <button id = "t2" ><img src="/Images/image__2_.png"></button>
+
+        </div>
+      </div> 
+
+      <div class="btn" id="generate-btn">
+        <button>Generate CV</button>
+      </div>
+
+    </div></center>>
+    <script src="index.js"></script>
+    <script src="validations.js"></script>
+    <script src="classes.js"></script>
+    <script src="localStorage.js"></script>
+
+</body>
+</html>

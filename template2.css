@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* width:  60%; */
+    margin: 0 auto;
+}
+.container{
+    /* border: black 2px solid; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /* box-shadow: 8px 8px 19px black; */
+
+    
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(52, 48, 48);
+    padding: 20px;
+    color: aliceblue;
+    }
+.right{
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+.right p{
+   text-align: right;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.half-2{
+    margin: 20px;
+    margin-left: 10%;
+}
+.half-1{
+    margin-left: 10%;
+}
+.box{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 10px;
+}
+
+.margin{
+    margin: 20px;
+}
+.education h2{
+    /* margin-top: 20px; */
+}
+.work-experience h2{
+    margin-top: 20px;
+}
+h2{
+    margin-bottom: 10px;
+}
+p,h5{
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+h5{
+    font-weight: bold;
+    font-size: large;
+}
+#address{
+    margin-top: 5px;
+}
+i{
+    padding-right: 5px;
+    color: white;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color: white;
+}
