@@ -134,23 +134,13 @@ template_btn2.addEventListener('click',() => {
   template_btn2.style.backgroundColor = "black";
 });
 
-// //Get form element
-// var form=document.getElementById("formId");
-// function submitForm(event){
-
-//    //Preventing page refresh
-//    event.preventDefault();
-// }
-
-// //Calling a function during form submission.
-// form.addEventListener('submit', submitForm);
 
 //generate button
 let bool=true;
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
   bool=true;
-  validations();
+  // validations();
   if(bool===true){
     local_storage();
   if(selected==1)

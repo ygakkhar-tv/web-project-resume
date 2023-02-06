@@ -74,10 +74,11 @@ header{
 .experience-details{
     /* border-right: 1px solid black; */
     padding-right:2%;
+    border-top: 1px dashed black;
+
 }
 
 .certificate-details{
-    border-bottom: 1px dashed black;
 
     padding-right:2%;
 }
@@ -130,4 +131,7 @@ img{
     max-width: 9em;
     border-radius: 50%;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
