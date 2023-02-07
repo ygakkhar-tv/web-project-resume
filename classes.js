@@ -10,23 +10,23 @@ class Education{
 }
 
 class Skills{
-  constructor(s_kill){
-    this.s_kill = s_kill;
+  constructor(skillName){
+    this.skillName = skillName;
   }
 }
 
 class Certificate{
-  constructor(CField, CAuth, CDate){
-    this.CField = CField;
-    this.CAuth = CAuth;
-    this.CDate = CDate;
+  constructor(certificateField, certificateAuthority, certificateDate){
+    this.certificateField = certificateField;
+    this.certificateAuthority = certificateAuthority;
+    this.certificateDate = certificateDate;
   }
 }
 
 class Experience{
-  constructor(sDate, tDate, cName){
-    this.sDate = sDate;
-    this.tDate = tDate;
-    this.cName = cName;
+  constructor(startDate, tillDate, companyName){
+    this.startDate = startDate;
+    this.tillDate = tillDate;
+    this.companyName = companyName;
   }
 }

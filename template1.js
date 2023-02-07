@@ -40,7 +40,7 @@ for (let i = 0; i < skillsData.length; i++) {
     skillsDiv.className = 'skills-div';
     let skillsTemplate = `
     <div class="s-div">
-    <p class="skills-element">${skillsData[i].s_kill}</p
+    <p class="skills-element">${skillsData[i].skillName}</p
     >
     </div>
     `;
@@ -53,14 +53,14 @@ for (let i = 0; i < skillsData.length; i++) {
 let experienceData = JSON.parse(localStorage.getItem('experienceArr'));
 let tempExperience = document.getElementById('experience');
 
-if(experienceData[0].sDate != ""){
+if(experienceData[0].startDate != ""){
     for (let i = 0; i < experienceData.length; i++) {
         let experienceDiv = document.createElement('div');
         experienceDiv.className = 'exp-div';
         let experienceTemplate = `
         <div class="exp-div">
-        <p>${experienceData[i].cName}</p>
-        <p>${experienceData[i].sDate} to ${experienceData[i].tDate}</p>
+        <p>${experienceData[i].companyName}</p>
+        <p>${experienceData[i].startDate} to ${experienceData[i].tillDate}</p>
         </div>
         `;
         experienceDiv.insertAdjacentHTML('beforeend',experienceTemplate);
@@ -84,9 +84,9 @@ for (let i = 0; i < certificateData.length; i++) {
     certificateDiv.className = 'certificateDiv';
     let certificateTemplate = `
                         <div class="certificateDiv">
-                            <h5>${certificateData[i].CField}</h5>
-                            <p>${certificateData[i].CAuth}</p>
-                            <p>${certificateData[i].CDate}</p>
+                            <h5>${certificateData[i].certificateField}</h5>
+                            <p>${certificateData[i].certificateAuthority}</p>
+                            <p>${certificateData[i].certificateDate}</p>
                         </div>
     `;
     certificateDiv.insertAdjacentHTML('beforeend',certificateTemplate);
