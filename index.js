@@ -11,11 +11,11 @@ education_btn.addEventListener("click", () => {
   tr.className = 'table-row';
 
   let template = `
-                  <td><input type="text" id="college-name" class="college-name-class" placeholder="enter university name"></td>
-                  <td><input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"></td>
+                  <td><input type="text" id="college-name" class="college-name-class" placeholder="Enter university name"></td>
+                  <td><input type="text" id="degree-name" class="degree-name-class" placeholder="Enter degree/diploma"></td>
                   <td><input type="text" id="field-name" class="field-name-class" ></td>
                   <td><input type="date" id="year-name" class="year-name-class"></td>
-                  <td><input type="text" id="grades" class="grades-class" placeholder="enter your grade"></td>
+                  <td><input type="text" id="grades" class="grades-class" placeholder="Enter your grade"></td>
              `;
   tr.insertAdjacentHTML('beforeend', template)
   table_body.appendChild(tr);
