@@ -10,8 +10,8 @@ class Education{
 }
 
 class Skills{
-  constructor(s_kill){
-    this.s_kill = s_kill;
+  constructor(skillName){
+    this.skillName = skillName;
   }
 }
 

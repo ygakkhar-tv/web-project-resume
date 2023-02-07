@@ -73,7 +73,7 @@ for (let i = 0; i < skillsData.length; i++) {
   skillsDiv.className = "skills-div";
   let skillsTemplate = `
     <div class="s-div">
-    <p class="skills-element">${skillsData[i].s_kill}</p>
+    <p class="skills-element">${skillsData[i].skillName}</p>
 
     </div>
     `;

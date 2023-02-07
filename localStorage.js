@@ -77,7 +77,7 @@ for (let i = 0; i <noOfSkills; i++) {
 }
 let sIndex = 0;
 Array.from(document.getElementsByClassName("skill-name")).forEach((ele) => {
-  skillArr[sIndex].s_kill  = ele.value;
+  skillArr[sIndex].skillName  = ele.value;
   sIndex++;
 }); 
 localStorage.setItem("skillArr", JSON.stringify(skillArr));
