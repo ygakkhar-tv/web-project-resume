@@ -94,21 +94,21 @@ localStorage.setItem("skillArr", JSON.stringify(skillArr));
   let eIndex = 0;
   //start date
   Array.from(document.getElementsByClassName("experience-sdate-class")).forEach((ele) => {
-    experienceArr[eIndex].sDate = ele.value;
+    experienceArr[eIndex].startDate = ele.value;
     eIndex++;
   });
 
   eIndex=0;
   //till date
   Array.from(document.getElementsByClassName("experience-tdate-class")).forEach((ele) => {
-    experienceArr[eIndex].tDate = ele.value;
+    experienceArr[eIndex].tillDate = ele.value;
     eIndex++;
   });
 
   eIndex=0;
   //till date
   Array.from(document.getElementsByClassName("company-name")).forEach((ele) => {
-    experienceArr[eIndex].cName = ele.value;
+    experienceArr[eIndex].companyName = ele.value;
     eIndex++;
   });
 
@@ -126,17 +126,17 @@ localStorage.setItem("skillArr", JSON.stringify(skillArr));
 
   let CIndex = 0;
   Array.from(document.getElementsByClassName('certificate-date-class')).forEach((ele) => {
-    certificateArr[CIndex].CDate = ele.value;
+    certificateArr[CIndex].certificateDate = ele.value;
     CIndex++;
   });
   CIndex =0;
   Array.from(document.getElementsByClassName('certificate-auth-class')).forEach((ele) => {
-    certificateArr[CIndex].CAuth = ele.value;
+    certificateArr[CIndex].certificateAuthority = ele.value;
     CIndex++;
   });
   CIndex =0;
   Array.from(document.getElementsByClassName('certificate-field-class')).forEach((ele) => {
-    certificateArr[CIndex].CField = ele.value;
+    certificateArr[CIndex].certificateField = ele.value;
     CIndex++;
   });
   localStorage.setItem("certificateArr", JSON.stringify(certificateArr));
