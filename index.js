@@ -3,18 +3,19 @@
 let row = 1;
 let education_btn = document.getElementById("add-education");
 let table_body = document.getElementById("table-body");
-
+let remove_education = document.getElementById("clear-education");
+remove_education.style.display = 'none';
 education_btn.addEventListener("click", () => {
+  remove_education.style.display = 'inline';
   let tr = document.createElement("tr");
+  tr.className = 'table-row';
 
   let template = `
-                <tr id='data' row="1" class="table-row">
                   <td><input type="text" id="college-name" class="college-name-class" placeholder="enter university name"></td>
                   <td><input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"></td>
                   <td><input type="text" id="field-name" class="field-name-class" ></td>
                   <td><input type="date" id="year-name" class="year-name-class"></td>
                   <td><input type="text" id="grades" class="grades-class" placeholder="enter your grade"></td>
-                </tr>
              `;
   tr.insertAdjacentHTML('beforeend', template)
   table_body.appendChild(tr);
@@ -22,8 +23,13 @@ education_btn.addEventListener("click", () => {
 });
 
 //clear button
-let remove_education = document.getElementById("clear-education");
 remove_education.addEventListener('click', () => {
+  let noOfEducationAvailable = document.getElementsByClassName('table-row').length;
+  if (noOfEducationAvailable == 2) {
+    remove_education.style.display = 'none';
+  } else {
+    remove_education.style.display = 'inline';
+  }
   if (row > 1) {
     table_body.deleteRow(row - 1);
     row--;
