@@ -150,7 +150,7 @@ let about_state = true;
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
   bool=true;
-  // validations();
+  validations();
   if(bool===true){
     local_storage();
   if(selected==1)

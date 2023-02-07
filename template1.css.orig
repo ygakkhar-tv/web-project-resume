@@ -8,12 +8,6 @@
 
     margin-left: auto;
     margin-right: auto;
-    /* border: solid black 2px !important; */
-    /* height: 99.5vh; */
-<<<<<<< HEAD
-    /* box-shadow: 8px 8px 19px black; */
-=======
->>>>>>> 2ad0898c52d4db4fb7edf307fc27e4e3ec1ae315
 
 }
 .main{
@@ -80,10 +74,11 @@ header{
 .experience-details{
     /* border-right: 1px solid black; */
     padding-right:2%;
+    border-top: 1px dashed black;
+
 }
 
 .certificate-details{
-    border-bottom: 1px dashed black;
 
     padding-right:2%;
 }
@@ -128,8 +123,6 @@ p,li{
 }
 .centre{
     border-right: 1px black solid;
-<<<<<<< HEAD
-   
 }
 .img{
     margin: 15%;
@@ -138,13 +131,17 @@ img{
     max-width: 9em;
     border-radius: 50%;
 }
-
+<<<<<<< HEAD
+a{
+    text-decoration: none;
+    color: black;
 =======
-}
 
-/* @media print {
-    @page {
-        size : 210mm 297mm;
-    }  
-  } */
->>>>>>> 2ad0898c52d4db4fb7edf307fc27e4e3ec1ae315
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color:blue;
+>>>>>>> b7819a866abb2595079059124f067d90abf178a8
+}

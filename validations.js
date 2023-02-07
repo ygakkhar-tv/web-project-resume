@@ -2,7 +2,6 @@
 function valid_email(email) {
   var mailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
   if (!mailFormat.test(email)) {
-    // alert("Invalid Email");
     focus_func(document.getElementById("email"));
     bool = false;
 
@@ -19,11 +18,10 @@ function valid_email(email) {
       valid_emailId.appendChild(email_div);
       email_state = false;
     }
-  } else if(!email_state) {
+  } else if (!email_state) {
     document.getElementById("email").style.border = "1px solid black";
     document.getElementById("email-para").style.display = "none";
   }
-
 }
 
 //generate button
@@ -56,10 +54,9 @@ function validations() {
       valid_fName.appendChild(fname_div);
       fname_state = false;
     }
-  } 
-  else if(!fname_state){
+  } else if (!fname_state) {
     document.getElementById("f-name").style.border = "1px solid black";
-  
+
     document.getElementById("fname-para").style.display = "none";
   }
 
@@ -82,7 +79,7 @@ function validations() {
       valid_lName.appendChild(lname_div);
       lname_state = false;
     }
-  } else if(!lname_state) {
+  } else if (!lname_state) {
     document.getElementById("l-name").style.border = "1px solid black";
     document.getElementById("lname-para").style.display = "none";
   }
@@ -106,7 +103,7 @@ function validations() {
       valid_linkedin.appendChild(linkedin_div);
       linkedin_state = false;
     }
-  } else if(!linkedin_state) {
+  } else if (!linkedin_state) {
     document.getElementById("linkedIn").style.border = "1px solid black";
     document.getElementById("linkedin-para").style.display = "none";
   }
@@ -129,7 +126,7 @@ function validations() {
       valid_github.appendChild(github_div);
       github_state = false;
     }
-  } else if(!github_state) {
+  } else if (!github_state) {
     document.getElementById("github").style.border = "1px solid black";
     document.getElementById("github-para").style.display = "none";
   }
@@ -159,7 +156,7 @@ function validations() {
       valid_phone.appendChild(phone_div);
       phone_state = false;
     }
-  } else if(!phone_state) {
+  } else if (!phone_state) {
     document.getElementById("phone").style.border = "1px solid black";
     document.getElementById("phone-para").style.display = "none";
   }
@@ -167,12 +164,10 @@ function validations() {
   //valid address
   const address = document.getElementById("address");
   if (address.value.length <= 0) {
-    // alert("Enter vaild address");
     focus_func(address);
     bool = false;
 
     if (address_state === true) {
-      //validation statement on page
       let valid_address = document.getElementById("address-box");
       let address_div = document.createElement("div");
 
@@ -183,18 +178,19 @@ function validations() {
       valid_address.appendChild(address_div);
       address_state = false;
     }
-  } else if(!address_state) {
+  } else if (!address_state) {
     address.style.border = "1px solid black";
     document.getElementById("address_para").style.display = "none";
   }
   //valid introduction
-  if (document.getElementById("aboutme").value.length <= 50 || document.getElementById("aboutme").value.length > 500) {
-    // alert("Length should be greater than 20");
+  if (
+    document.getElementById("aboutme").value.length <= 50 ||
+    document.getElementById("aboutme").value.length > 500
+  ) {
     focus_func(document.getElementById("aboutme"));
     bool = false;
 
     if (about_state === true) {
-      //validation statement on page
       let valid_about = document.getElementById("about-box");
       let about_div = document.createElement("div");
 
@@ -205,7 +201,7 @@ function validations() {
       valid_about.appendChild(about_div);
       about_state = false;
     }
-  } else if(!about_state) {
+  } else if (!about_state) {
     document.getElementById("aboutme").style.border = "1px solid black";
     document.getElementById("about-para").style.display = "none";
   }
@@ -216,7 +212,6 @@ function validations() {
   if (!college_name.value.match(clg) || college_name.value.length === 0) {
     focus_func(college_name);
     bool = false;
-
   } else {
     college_name.style.border = "1px solid black";
   }

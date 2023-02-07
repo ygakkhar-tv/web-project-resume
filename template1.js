@@ -123,6 +123,7 @@ var delayInMilliseconds = 1000; //1 second
 
 setTimeout(function () {
   document.getElementById("container").style.height = "99.5vh";
+  document.getElementById("templ2").style.visibility = "hidden";
 
   window.print();
 }, delayInMilliseconds);
@@ -132,6 +133,11 @@ setTimeout(function () {
   document.getElementById("container").style.height = "auto";
   document.getElementById("name");
   document.getElementById("container").style.boxShadow = "8px 8px 19px black";
-
-  // document.getElementById("container").style.border="2px solid black";
+  document.getElementById("templ2").style.visibility = "visible";
 }, delayInMilliseconds);
+
+let template_button2 = document.getElementById("templ2");
+
+template_button2.addEventListener("click", () => {
+  window.location.href = "template2.html";
+});
