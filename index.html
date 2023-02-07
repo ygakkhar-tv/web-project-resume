@@ -22,15 +22,18 @@
             <label for="f-name">First Name<span>&#42;</span></label>
             <input type="text" id="f-name" class="per-details" placeholder="Enter here" minlength="4" maxlength="20"
               required />
+              <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="fname-para" >Fill atleast 4 characters in this field</p>
           </div>
 
           <div id="emailbox">
             <label for="email">Email<span>&#42;</span></label>
             <input type="email" name="email" id="email" class="per-details" placeholder="Enter your email" required />
+            <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="email-para">Enter correct email</p>
           </div>
           <div id="linkedinbox">
             <label for="linkedIn">LinkedIn Profile</label>
             <input type="url" name="linkedIn" id="linkedIn" class="per-details" placeholder="enter profile" />
+            <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="linkedin-para">Fill appropriate linkedin id</p>
           </div>
           <div id="websitebox">
             <label for="website">Website</label>
@@ -42,20 +45,24 @@
           <div id="lbox">
             <label for="l-name">Last Name<span>&#42;</span></label>
             <input type="text" id="l-name" class="per-details" placeholder="Enter here" maxlength="20" required />
+            <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="lname-para" >Fill atleast 4 characters in this field</p>
           </div>
           <div id="phonebox">
             <label for="phone">Phone<span>&#42;</span></label>
             <input type="tel" name="phone" id="phone" class="per-details" placeholder="111-111-1111" maxlength="10"
               required />
+              <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="phone-para">Phone number should be numeric and its length be 10</p>
           </div>
           <div id="github-box">
             <label for="github">Github Profile</label>
             <input type="url" name="github" id="github" class="per-details" placeholder="enter profile" />
+            <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="github-para">Fill appropriate github id</p>
           </div>
           <div id="address-box">
             <label for="address">Address<span>&#42;</span></label>
             <input type="text" name="address" id="address" maxlength="80" class="per-details" placeholder="Your address"
               required />
+              <p style="color:red; margin-top:-15px; font-size:12px; visibility:hidden" id="address_para">Fill the required address field</p>
           </div>
         </div>
 
@@ -68,6 +75,7 @@
       <div class="box" id="about-box">
         <textarea name="aboutme" id="aboutme" cols="50" rows="3" placeholder="Describe yourself here..."
           required></textarea>
+          <p style="color:red; margin-top:2px; font-size:12px; visibility:hidden" id="about-para">The field is empty or exceeds maximum limit </p>
       </div>
     </div>
     <div class="education">

@@ -5,24 +5,14 @@ function valid_email(email) {
     // alert("Invalid Email");
     focus_func(document.getElementById("email"));
     bool = false;
+    document.getElementById("email").style.border = "1px solid red";
+    document.getElementById("email-para").style.visibility = "visible";
 
-    if (email_state === true) {
-      //validation statement on page
-      let valid_emailId = document.getElementById("emailbox");
-      let email_div = document.createElement("div");
-      console.log(valid_emailId);
-
-      let template = `
-                  <p style="color:red; margin-top:-15px; font-size:12px" id="email-para">Enter correct email</p>
-               `;
-      email_div.insertAdjacentHTML("beforeend", template);
-      valid_emailId.appendChild(email_div);
-      email_state = false;
-    }
-  } else if(!email_state) {
+  } 
+  document.getElementById("email").addEventListener('change', ()=>{
     document.getElementById("email").style.border = "1px solid black";
-    document.getElementById("email-para").style.display = "none";
-  }
+    document.getElementById("email-para").style.visibility = "hidden";
+  })
 
 }
 
@@ -37,132 +27,81 @@ function focus_func(elem) {
 //validation function
 function validations() {
   //valid first name
-  const f_name = document.getElementById("f-name").value;
+  const f_name = document.getElementById("f-name");
+  console.log(`f_name: ${f_name.value}`);
   var FName = /^[a-zA-Z]+[a-zA-Z]+$/;
-  if (!f_name.match(FName) || f_name.length < 4) {
-    focus_func(document.getElementById("f-name"));
-    bool = false;
-
-    if (fname_state === true) {
-      //validation statement on page
-      let valid_fName = document.getElementById("fbox");
-      let fname_div = document.createElement("div");
-      console.log(valid_fName);
-
-      let template = `
-                 <p style="color:red; margin-top:-15px; font-size:12px" id="fname-para">Fill atleast 4 characters in this field</p>
-              `;
-      fname_div.insertAdjacentHTML("beforeend", template);
-      valid_fName.appendChild(fname_div);
-      fname_state = false;
-    }
+  if (!f_name.value.match(FName) || f_name.value.length < 4) {
+    document.getElementById("fname-para").style.visibility = "visible";
+    document.getElementById("f-name").style.border = "1px solid red";
   } 
-  else if(!fname_state){
+  f_name.addEventListener('change', ()=>{
     document.getElementById("f-name").style.border = "1px solid black";
-  
-    document.getElementById("fname-para").style.display = "none";
-  }
+    document.getElementById("fname-para").style.visibility = "hidden";
+  })
+ 
 
   //valid last name
-  const l_name = document.getElementById("l-name").value;
+  const l_name = document.getElementById("l-name");
   var LName = /^[a-zA-Z]+[a-zA-Z]+$/;
-  if (!l_name.match(LName) || l_name.length < 4) {
+  if (!l_name.value.match(LName) || l_name.value.length < 4) {
     focus_func(document.getElementById("l-name"));
     bool = false;
-
-    if (lname_state === true) {
-      //validation statement on page
-      let valid_lName = document.getElementById("lbox");
-      let lname_div = document.createElement("div");
-
-      let template = `
-                 <p style="color:red; margin-top:-15px; font-size:12px" id="lname-para">Fill atleast 4 characters in this field</p>
-              `;
-      lname_div.insertAdjacentHTML("beforeend", template);
-      valid_lName.appendChild(lname_div);
-      lname_state = false;
-    }
-  } else if(!lname_state) {
-    document.getElementById("l-name").style.border = "1px solid black";
-    document.getElementById("lname-para").style.display = "none";
+    document.getElementById("l-name").style.border = "1px solid red";
+    document.getElementById("lname-para").style.visibility = "visible";
   }
+  l_name.addEventListener('change', ()=>{
+    document.getElementById("l-name").style.border = "1px solid black";
+    document.getElementById("lname-para").style.visibility = "hidden";
+})
 
   // Validate LinkedIn Profile URL
-  const linkedIn = document.getElementById("linkedIn").value;
-  var linkedInValue = /^(https?:\/\/)(www\.)?linkedin.com/;
-  if (!linkedIn.match(linkedInValue)) {
+  const linkedIn = document.getElementById("linkedIn");
+  if (linkedIn.value === "") {
     focus_func(document.getElementById("linkedIn"));
-    bool = false;
-
-    if (linkedin_state === true) {
-      //validation statement on page
-      let valid_linkedin = document.getElementById("linkedinbox");
-      let linkedin_div = document.createElement("div");
-
-      let template = `
-                <p style="color:red; margin-top:-15px; font-size:12px" id="linkedin-para">Fill appropriate linkedin id</p>
-             `;
-      linkedin_div.insertAdjacentHTML("beforeend", template);
-      valid_linkedin.appendChild(linkedin_div);
-      linkedin_state = false;
-    }
-  } else if(!linkedin_state) {
+    document.getElementById("linkedIn").style.border = "1px solid red";
+    document.getElementById("linkedin-para").style.visibility = "visible";
+  } 
+  linkedIn.addEventListener('change', ()=> {
     document.getElementById("linkedIn").style.border = "1px solid black";
-    document.getElementById("linkedin-para").style.display = "none";
-  }
+    document.getElementById("linkedin-para").style.visibility = "hidden";
+  })
+
   //github profile validation
-  const Github = document.getElementById("github").value;
-  var GithubRegxp = /^(https?:\/\/)?github.com/;
-  if (!Github.match(GithubRegxp)) {
+  const Github = document.getElementById("github");
+  if (Github.value === "") {
     focus_func(document.getElementById("github"));
     bool = false;
-
-    if (github_state === true) {
-      //validation statement on page
-      let valid_github = document.getElementById("github-box");
-      let github_div = document.createElement("div");
-
-      let template = `
-                 <p style="color:red; margin-top:-15px; font-size:12px" id="github-para">Fill appropriate github id</p>
-              `;
-      github_div.insertAdjacentHTML("beforeend", template);
-      valid_github.appendChild(github_div);
-      github_state = false;
-    }
-  } else if(!github_state) {
+    document.getElementById("github").style.border = "1px solid red";
+    document.getElementById("github-para").style.visibility = "visible";
+  
+  } 
+  Github.addEventListener('change',() => {
     document.getElementById("github").style.border = "1px solid black";
-    document.getElementById("github-para").style.display = "none";
-  }
+    document.getElementById("github-para").style.visibility = "hidden";
+  })
 
   //valid email
   valid_email(document.getElementById("email").value);
 
   //valid phone
-  const phone_num = document.getElementById("phone").value;
+  const phone_num_value = document.getElementById("phone").value;
+  const phone_num = document.getElementById("phone");
   if (
-    phone_num[0] != 6 &&
-    phone_num[0] != 7 &&
-    phone_num[0] != 8 &&
-    phone_num[0] != 9
+    phone_num_value[0] != 6 &&
+    phone_num_value[0] != 7 &&
+    phone_num_value[0] != 8 &&
+    phone_num_value[0] != 9
   ) {
     focus_func(document.getElementById("phone"));
     bool = false;
+    document.getElementById("phone").style.border = "1px solid red";
+    document.getElementById("phone-para").style.visibility = "visible";
 
-    if (phone_state === true) {
-      //validation statement on page
-      let valid_phone = document.getElementById("phonebox");
-      let phone_div = document.createElement("div");
-      let template = `
-               <p style="color:red; margin-top:-15px; font-size:12px" id="phone-para">Phone number should be numeric and its length be 10</p>
-            `;
-      phone_div.insertAdjacentHTML("beforeend", template);
-      valid_phone.appendChild(phone_div);
-      phone_state = false;
-    }
-  } else if(!phone_state) {
+  } 
+  phone_num.addEventListener('change', ()=> {
     document.getElementById("phone").style.border = "1px solid black";
-    document.getElementById("phone-para").style.display = "none";
-  }
+    document.getElementById("phone-para").style.visibility = "hidden";
+  })
 
   //valid address
   const address = document.getElementById("address");
@@ -170,45 +109,26 @@ function validations() {
     // alert("Enter vaild address");
     focus_func(address);
     bool = false;
+    address.style.border = "1px solid red";
+    document.getElementById("address_para").style.visibility = "visible";
 
-    if (address_state === true) {
-      //validation statement on page
-      let valid_address = document.getElementById("address-box");
-      let address_div = document.createElement("div");
-
-      let template = `
-              <p style="color:red; margin-top:-15px; font-size:12px" id="address_para">Fill the required address field</p>
-           `;
-      address_div.insertAdjacentHTML("beforeend", template);
-      valid_address.appendChild(address_div);
-      address_state = false;
-    }
-  } else if(!address_state) {
+  } 
+  address.addEventListener('change', ()=>{
     address.style.border = "1px solid black";
-    document.getElementById("address_para").style.display = "none";
-  }
+    document.getElementById("address_para").style.visibility = "hidden";
+  })
+
   //valid introduction
   if (document.getElementById("aboutme").value.length <= 50 || document.getElementById("aboutme").value.length > 500) {
-    // alert("Length should be greater than 20");
     focus_func(document.getElementById("aboutme"));
     bool = false;
-
-    if (about_state === true) {
-      //validation statement on page
-      let valid_about = document.getElementById("about-box");
-      let about_div = document.createElement("div");
-
-      let template = `
-              <p style="color:red; margin-top:2px; font-size:12px" id="about-para">The field is empty or exceeds maximum limit </p>
-           `;
-      about_div.insertAdjacentHTML("beforeend", template);
-      valid_about.appendChild(about_div);
-      about_state = false;
-    }
-  } else if(!about_state) {
+    document.getElementById("aboutme").style.border = "1px solid red";
+    document.getElementById("about-para").style.visibility = "visible";
+  } 
+  document.getElementById("aboutme").addEventListener('change', ()=>{
     document.getElementById("aboutme").style.border = "1px solid black";
-    document.getElementById("about-para").style.display = "none";
-  }
+    document.getElementById("about-para").style.visibility = "hidden";
+  })
 
   //valid education details
   const college_name = document.getElementById("college-name");
