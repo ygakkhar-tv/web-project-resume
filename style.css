@@ -92,6 +92,8 @@ span {
 }
 th {
   text-align: left;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 #select-templates {
@@ -100,7 +102,7 @@ th {
 }
 #select-templates select,
 label {
-  font-size: larger;
+  font-size: 1em;
 }
 .skills input,
 label {
@@ -163,6 +165,7 @@ button {
   background: #6cda96;
   border: none;
   border-radius: 5px;
+  margin-bottom: 25px;
 }
 .Certification button,
 .experience button,
@@ -178,6 +181,7 @@ h1{
 input{
   border-radius: 5px;
 }
-#clear-education{
-  visibility: hidden;
+
+#education-btn button{
+  display: inline;
 }
