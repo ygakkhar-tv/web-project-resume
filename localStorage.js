@@ -2,22 +2,17 @@
 function local_storage() {
 
   //personal info
-  const Fname = document.getElementById('f-name').value;
-  localStorage.setItem("FName", Fname);
-  const LName = document.getElementById('l-name').value;
-  localStorage.setItem("LName", LName);
-  const email = document.getElementById("email").value;
-  localStorage.setItem("email", email);
-  const linkedIn = document.getElementById("linkedIn").value;
-  localStorage.setItem("linkedIn", linkedIn);
-  const address = document.getElementById("address").value;
-  localStorage.setItem("address", address);
-  const phone = document.getElementById("phone").value;
-  localStorage.setItem("phone", phone);
-  const website = document.getElementById("website").value;
-  localStorage.setItem("website", website);
-  const github = document.getElementById("github").value;
-  localStorage.setItem("github", github);
+  let personalDetailsArray = new Array(8);
+  personalDetailsArray[0] = document.getElementById('firstName').value;
+  personalDetailsArray[1] = document.getElementById('lastName').value;
+  personalDetailsArray[2] = document.getElementById('email').value;
+  personalDetailsArray[3] = document.getElementById('linkedIn').value;
+  personalDetailsArray[4] = document.getElementById('address').value;
+  personalDetailsArray[5] = document.getElementById('phone').value;
+  personalDetailsArray[6] = document.getElementById('website').value;
+  personalDetailsArray[7] = document.getElementById('github').value;
+
+  localStorage.setItem("personalDetailsArray", JSON.stringify(personalDetailsArray));
 
   //about me
   const aboutme = document.getElementById("aboutme").value;

@@ -59,14 +59,7 @@ textarea {
   margin-left: 10%;
 }
 
-.education input {
-  border: none;
-  width: 78%;
-  padding: 8px;
-  margin-top: 10px;
-}
-
-.experience input,
+ .experience input,
 .Certification input {
   padding: 5px;
   width: 200px;
@@ -74,6 +67,13 @@ textarea {
   margin-top: 10px;
   border: none;
 }
+.education input{
+    padding: 5px;
+    max-width: 153px;
+    margin-right: 14px;
+    margin-top: 10px;
+    border: none;
+} 
 
 .remove {
   background-color: transparent;
@@ -186,6 +186,9 @@ input{
 #education-btn button{
   display: inline;
 }
+
+
+
 @media (max-width:600px){
   #formid{
     display: grid;
@@ -197,11 +200,17 @@ input{
     width: fit-content;
     margin-left: 10px;
   }
+  .box3{
+    margin-bottom: 8px;
+  }
 }
 @media (max-width:1020px){
   .row2{
     grid-template-columns: none;
 
+  }
+  .box3{
+    margin-bottom: 8px;
   }
 
 }

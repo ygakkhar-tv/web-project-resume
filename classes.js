@@ -1,3 +1,4 @@
+
 //education class
 class Education{
   constructor(sName, degree, fields, passingYear, grades){

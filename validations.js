@@ -26,30 +26,30 @@ function focus_func(elem) {
 //validation function
 function validations() {
   //valid first name
-  const f_name = document.getElementById("f-name");
+  const f_name = document.getElementById("firstName");
   console.log(`f_name: ${f_name.value}`);
   var FName = /^[a-zA-Z]+[a-zA-Z]+$/;
   if (!f_name.value.match(FName) || f_name.value.length < 4) {
     document.getElementById("fname-para").style.visibility = "visible";
-    document.getElementById("f-name").style.border = "1px solid red";
+    document.getElementById("firstName").style.border = "1px solid red";
   } 
   f_name.addEventListener('change', ()=>{
-    document.getElementById("f-name").style.border = "1px solid black";
+    document.getElementById("firstName").style.border = "1px solid black";
     document.getElementById("fname-para").style.visibility = "hidden";
   })
  
 
   //valid last name
-  const l_name = document.getElementById("l-name");
+  const l_name = document.getElementById("lastName");
   var LName = /^[a-zA-Z]+[a-zA-Z]+$/;
   if (!l_name.value.match(LName) || l_name.value.length < 4) {
-    focus_func(document.getElementById("l-name"));
+    focus_func(document.getElementById("lastName"));
     bool = false;
-    document.getElementById("l-name").style.border = "1px solid red";
+    document.getElementById("lastName").style.border = "1px solid red";
     document.getElementById("lname-para").style.visibility = "visible";
   }
   l_name.addEventListener('change', ()=>{
-    document.getElementById("l-name").style.border = "1px solid black";
+    document.getElementById("lastName").style.border = "1px solid black";
     document.getElementById("lname-para").style.visibility = "hidden";
 })
 
@@ -161,4 +161,5 @@ function validations() {
   } else {
     grades.style.border = "1px solid black";
   }
+  isButtonVisible=false;
 }

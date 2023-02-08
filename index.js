@@ -9,16 +9,15 @@ education_btn.addEventListener("click", () => {
   educationCount++;
 
   let educationTemplate = `
-  <input type="text"id="college-name" class="college-name-class" placeholder="enter name here"
-  required  />
-  <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"
-  required />
+  <input type="text"id="college-name" class="college-name-class" placeholder="enter name here" required  />
+  <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma" required />
   <input type="text" id="field-name" class="field-name-class" />
   <input type="date" id="year-name" class="year-name-class" />
   <input type="text" id="grades" class="grades-class" placeholder="enter your grade" required />
   <button id="${educationCount}" onclick="removeEducation(this)">Clear</button>
    `;
   educationDiv.id = `education-data-${educationCount}`;
+  educationDiv.className = 'flex-div';
   educationDiv.insertAdjacentHTML('beforeend', educationTemplate);
   education_block.appendChild(educationDiv);
 });
@@ -146,7 +145,7 @@ let isButtonVisible=true;
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
   isButtonVisible=true;
-  // validations();
+  validations();
   if(isButtonVisible===true){
     local_storage();
   if(selected==1)
