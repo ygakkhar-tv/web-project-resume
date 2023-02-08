@@ -125,7 +125,7 @@ for (let i = 0; i < certificateData.length; i++) {
   tempCertificate.appendChild(certificateDiv);
 }
 document.getElementById("container").style.width = "99%";
-document.getElementById("templ1").style.visibility = "hidden";
+document.getElementById("toTemplate1Button").style.visibility = "hidden";
 
 var delayInMilliseconds = 1000; //1 second
 
@@ -136,9 +136,9 @@ setTimeout(function () {
 setTimeout(function () {
   document.getElementById("container").style.width = "50%";
   document.getElementById("container").style.boxShadow = "8px 8px 19px black";
-  document.getElementById("templ1").style.visibility = "visible";
+  document.getElementById("toTemplate1Button").style.visibility = "visible";
 }, delayInMilliseconds);
-let template_button1 = document.getElementById("templ1");
+let template_button1 = document.getElementById("toTemplate1Button");
 
 template_button1.addEventListener("click", () => {
   window.location.href = "template1.html";

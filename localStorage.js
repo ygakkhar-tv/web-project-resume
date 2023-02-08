@@ -69,16 +69,14 @@ function local_storage() {
 //skills
 let noOfSkills = length;
 
-console.log("no Of skills: " +noOfSkills);
-
 let skillArr = new Array(noOfSkills);
 for (let i = 0; i <noOfSkills; i++) {
   skillArr[i] = new Skills("");
 }
-let sIndex = 0;
+let skillindex = 0;
 Array.from(document.getElementsByClassName("skill-name")).forEach((ele) => {
-  skillArr[sIndex].skillName  = ele.value;
-  sIndex++;
+  skillArr[skillindex].skillName  = ele.value;
+  skillindex++;
 }); 
 localStorage.setItem("skillArr", JSON.stringify(skillArr));
 
@@ -91,25 +89,25 @@ localStorage.setItem("skillArr", JSON.stringify(skillArr));
     experienceArr[i] = new Experience("", "", "");
   }
 
-  let eIndex = 0;
+  let experienceIndex = 0;
   //start date
   Array.from(document.getElementsByClassName("experience-sdate-class")).forEach((ele) => {
-    experienceArr[eIndex].startDate = ele.value;
-    eIndex++;
+    experienceArr[experienceIndex].startDate = ele.value;
+    experienceIndex++;
   });
 
-  eIndex=0;
+  experienceIndex=0;
   //till date
   Array.from(document.getElementsByClassName("experience-tdate-class")).forEach((ele) => {
-    experienceArr[eIndex].tillDate = ele.value;
-    eIndex++;
+    experienceArr[experienceIndex].tillDate = ele.value;
+    experienceIndex++;
   });
 
-  eIndex=0;
+  experienceIndex=0;
   //till date
   Array.from(document.getElementsByClassName("company-name")).forEach((ele) => {
-    experienceArr[eIndex].companyName = ele.value;
-    eIndex++;
+    experienceArr[experienceIndex].companyName = ele.value;
+    experienceIndex++;
   });
 
   localStorage.setItem("experienceArr", JSON.stringify(experienceArr));

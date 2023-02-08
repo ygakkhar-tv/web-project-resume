@@ -50,11 +50,11 @@ p {
 }
 
 .edu-1 {
-  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
 }
 
 .edu-2 {
-  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
 }
 
 .aboutme,
@@ -129,11 +129,11 @@ a {
 a:hover {
   color: blue;
 }
-.templ2 {
+.toTemplate2Button {
   text-align: center;
   margin-bottom: 1%;
 }
-#templ2 {
+#toTemplate2Button {
   background-color: rgb(212, 211, 211);
   border-radius: 5px;
   border: none;

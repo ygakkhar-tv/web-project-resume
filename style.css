@@ -47,6 +47,7 @@ textarea {
 }
 #about-box {
   width: 90%;
+  border-radius: 10px;
 }
 
 .education,
@@ -166,6 +167,7 @@ button {
   border: none;
   border-radius: 5px;
   margin-bottom: 25px;
+  
 }
 .Certification button,
 .experience button,
@@ -184,4 +186,23 @@ input{
 
 #education-btn button{
   display: inline;
+}
+@media (max-width:600px){
+  #formid{
+    display: grid;
+  }
+  #t1 {
+    margin-right: 0px;
+  }
+  #formid{
+    width: fit-content;
+    margin-left: 10px;
+  }
+}
+@media (max-width:1020px){
+  .row2{
+    grid-template-columns: none;
+
+  }
+
 }

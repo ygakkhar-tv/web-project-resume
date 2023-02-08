@@ -123,7 +123,7 @@ var delayInMilliseconds = 1000; //1 second
 
 setTimeout(function () {
   document.getElementById("container").style.height = "99.5vh";
-  document.getElementById("templ2").style.visibility = "hidden";
+  document.getElementById("toTemplate2Button").style.visibility = "hidden";
 
   window.print();
 }, delayInMilliseconds);
@@ -133,10 +133,10 @@ setTimeout(function () {
   document.getElementById("container").style.height = "auto";
   document.getElementById("name");
   document.getElementById("container").style.boxShadow = "8px 8px 19px black";
-  document.getElementById("templ2").style.visibility = "visible";
+  document.getElementById("toTemplate2Button").style.visibility = "visible";
 }, delayInMilliseconds);
 
-let template_button2 = document.getElementById("templ2");
+let template_button2 = document.getElementById("toTemplate2Button");
 
 template_button2.addEventListener("click", () => {
   window.location.href = "template2.html";

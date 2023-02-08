@@ -81,12 +81,12 @@ a {
 a:hover {
   color: blue;
 }
-.templ1 {
+.toTemplate1Button {
   text-align: center;
 
   padding: 2%;
 }
-#templ1 {
+#toTemplate1Button {
   background-color: rgb(52, 48, 48);
   border-radius: 5px;
   border: none;
