@@ -80,42 +80,37 @@
     </div>
     <div class="education">
       <h2>Education</h2>
-      <div class="higher-studies">
-
-        <table class="education-table" id="education-table">
-          <thead id="table-head">
-            <tr>
-              <th>School/College Name<span>&#42;</span></th>
-              <th>Degree/Diploma<span>&#42;</span></th>
-              <th>Field(s) of Study</th>
-              <th>Passing Year<span>&#42;</span></th>
-              <th>Grades<span>&#42;</span></th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-            <tr id="data" row="1" class="table-row">
-              <td id="clg-name">
-                <input type="text" id="college-name" class="college-name-class" placeholder="enter name here"
-                  required />
-              </td>
-              <td>
-                <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"
-                  required />
-              </td>
-              <td><input type="text" id="field-name" class="field-name-class" /></td>
-              <td><input type="date" id="year-name" class="year-name-class" /></td>
-              <td>
-                <input type="text" id="grades" class="grades-class" placeholder="enter your grade" required />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="btn" id="education-btn">
-          <button id="add-education">Add</button>
-          <button id="clear-education">Clear</button>
+      <div class="education-table" id="education-data-1">
+        <div class="box3">
+          <label for="college-name">School Name</label>
+          <input type="text"id="college-name" class="college-name-class" placeholder="enter name here"
+          required  />
         </div>
+        <div class="box3">
+          <label for="degree-name">Degree/Diploma</label>
+          <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"
+          required />
+        </div>
+        <div class="box3">
+          <label for="field-name">Field(s) of Study</label>
+          <input type="text" id="field-name" class="field-name-class" />
+        </div>
+        <div class="box3">
+          <label for="year-name">Passing year</label>
+          <input type="date" id="year-name" class="year-name-class" />
+        </div>
+        <div class="box3">
+          <label for="grades">Grades</label>
+          <input type="text" id="grades" class="grades-class" placeholder="enter your grade" required />
+        </div>
+        <button id="10000" class="remove" onclick="removeEducation(this)">Clear</button>   
+      </div>
+      <div class="btn" id="education-btn">
+        <button id="add-education">Add</button>
       </div>
     </div>
+
+
     <div class="skills">
       <h2>Skills</h2>
       <div class="skills-data" id="skills-data-1">

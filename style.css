@@ -1,21 +1,20 @@
-.personal input{
+.personal input {
     display: table-cell;
     width: 300px;
     padding: 3%;
-    margin-right:45px;
+    margin-right: 45px;
 }
-td{
-margin-right: 45px;
-}
-label{
+
+label {
     display: table-cell;
     size: 300px;
 }
-textarea{
-    display:table-cell;
+
+textarea {
+    display: table-cell;
 }
 
-.Container{
+.Container {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -24,116 +23,138 @@ textarea{
     border-radius: 2%;
 }
 
-body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* background-image:url("/Images/stars.jpg"); */
 }
-.box{
-    display:inline-block;
-    
+
+.box {
+    display: inline-block;
+
 }
-.box2{
-    display:inline-block;
+
+.box2 {
+    display: inline-block;
     float: right;
     margin-right: 13%;
-    
+}
 
-    
+.box3 {
+    display: inline-block;
 }
-.box3{
-    display:inline-block; 
-}
-.per-details{
+
+.per-details {
     margin-bottom: 20px;
 }
 
-.about textarea{
-    width:100%;
+.about textarea {
+    width: 100%;
     padding: 2%;
     width: fit-content;
 }
 
 
-.education,.experience,.Certification,.personal,.about,.skills{
+.education,
+.experience,
+.Certification,
+.personal,
+.about,
+.skills {
     margin-left: 10%;
 }
 
-.education input{
+/* .education input{
     border-width: 1px;
     width: 78%;
     padding: 8px;
-}
-.experience input,label{
-    width: 200px;
-    margin-right: 25px;
-}
+} */
 .experience input{
-    padding: 5px;
-}
-.Certification input,label{
     width: 200px;
     margin-right: 25px;
 }
-.Certification input{
+
+.experience input {
     padding: 5px;
 }
-.remove{
+
+.Certification input{
+    width: 200px;
+    margin-right: 25px;
+}
+
+.Certification input {
+    padding: 5px;
+}
+
+.remove {
     background-color: transparent;
     border-color: transparent;
 }
-.Container{
+
+.Container {
     border: black 2px solid;
-     box-shadow: 5px 5px 12px black;
+    box-shadow: 5px 5px 12px black;
 }
-#generate-btn{
-    margin-bottom: 2%;;
-    text-align: center;}
-    #generate-btn button{
-        padding: 15px;
-    }
-    span{
-        color: red;
-         }
-         th{
-            text-align: left;
-         }
 
+#generate-btn {
+    margin-bottom: 2%;
+    ;
+    text-align: center;
+}
 
-         #select-templates{
-            margin-left:10% ;
-            padding-top: 2%;
-            
-         }
-         #select-templates select,label{
-            font-size: larger;
-         }
-         .skills input,label{
-            width: 200px;
-            margin-right: 25px;
-        }
-        .skills input{
-            padding: 5px;
-        }
+#generate-btn button {
+    padding: 15px;
+}
 
-#formid{
-    padding-top:20px;
+span {
+    color: red;
+}
+
+#select-templates {
+    margin-left: 10%;
+    padding-top: 2%;
+
+}
+
+#select-templates select,
+label {
+    font-size: larger;
+}
+
+.skills input{
+    width: 200px;
+    margin-right: 25px;
+}
+
+.skills input {
+    padding: 5px;
+}
+
+#formid {
+    padding-top: 20px;
     padding-bottom: 50px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 
 }
-#formid button img{
-    width:200px;
-    height:300px;
+
+#formid button img {
+    width: 200px;
+    height: 300px;
 }
 
 #t1:active {
     background-color: black;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
-  #t2:active {
+}
+
+#t2:active {
     background-color: black;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
+
+#education-table {
+    display: inline;
+}

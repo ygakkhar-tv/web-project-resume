@@ -1,34 +1,39 @@
 //education add and clear button 
 //add button
-let row = 1;
+let educationCount = 10000;
 let education_btn = document.getElementById("add-education");
-let table_body = document.getElementById("table-body");
+let education_block = document.getElementById("education-data-1");
 
 education_btn.addEventListener("click", () => {
-  let tr = document.createElement("tr");
+  let educationDiv = document.createElement("div");
+  educationCount++;
 
-  let template = `
-                <tr id='data' row="1" class="table-row">
-                  <td><input type="text" id="college-name" class="college-name-class" placeholder="enter university name"></td>
-                  <td><input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"></td>
-                  <td><input type="text" id="field-name" class="field-name-class" ></td>
-                  <td><input type="date" id="year-name" class="year-name-class"></td>
-                  <td><input type="text" id="grades" class="grades-class" placeholder="enter your grade"></td>
-                </tr>
-             `;
-  tr.insertAdjacentHTML('beforeend', template)
-  table_body.appendChild(tr);
-  row++;
+  let educationTemplate = `
+  <input type="text"id="college-name" class="college-name-class" placeholder="enter name here"
+  required  />
+  <input type="text" id="degree-name" class="degree-name-class" placeholder="enter degree/diploma"
+  required />
+  <input type="text" id="field-name" class="field-name-class" />
+  <input type="date" id="year-name" class="year-name-class" />
+  <input type="text" id="grades" class="grades-class" placeholder="enter your grade" required />
+  <button id="${educationCount}" onclick="removeEducation(this)">Clear</button>
+   `;
+  educationDiv.id = `education-data-${educationCount}`;
+  educationDiv.insertAdjacentHTML('beforeend', educationTemplate);
+  education_block.appendChild(educationDiv);
 });
-
+console.log(`eduction-count: ${educationCount}`);
 //clear button
-let remove_education = document.getElementById("clear-education");
-remove_education.addEventListener('click', () => {
-  if (row > 1) {
-    table_body.deleteRow(row - 1);
-    row--;
+document.getElementById("10000").style.display = "none";
+function removeEducation(button) {
+  console.log("button :" + button.id);
+  if (button.id !== 10000) {
+    let num3 = button.id;
+    let row3 = document.getElementById('education-data-' + num3);
+    row3.remove();
+    console.log(button.id);
   }
-})
+}
 
 
 //skills add and clear button 
@@ -134,17 +139,6 @@ template_btn2.addEventListener('click',() => {
   template_btn2.style.backgroundColor = "black";
 });
 
-// //Get form element
-// var form=document.getElementById("formId");
-// function submitForm(event){
-
-//    //Preventing page refresh
-//    event.preventDefault();
-// }
-
-// //Calling a function during form submission.
-// form.addEventListener('submit', submitForm);
-
 //generate button
 let bool=true;
 
@@ -160,7 +154,7 @@ let about_state = true;
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
   bool=true;
-  validations();
+  // validations();
   if(bool===true){
     local_storage();
   if(selected==1)
