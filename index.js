@@ -46,7 +46,7 @@ skill_btn.addEventListener('click', ()=>{
   let skill_div = document.createElement('div');
   skill_count = skill_count +1;
   let template = `
-  <input type="text" id="skill-name" class="skill-name" placeholder="add skill here">
+  <input type="text" id="skill-name" class="skill-name" placeholder="Add skill here">
   <button id="${skill_count}" onclick="removeSkill(this)">Clear</button>
   `
   skill_div.id =`skill-data-${skill_count}`;
@@ -73,14 +73,14 @@ let experience_block = document.getElementById("experience-data-1");
 experience_btn.addEventListener("click", () => {
   let experienceDiv = document.createElement("div");
   flag = flag + 1;
-  let template = `
+  let experienceTemplate = `
     <input type="month" name="experience_start_date" id="experience_start_date" class="experience-sdate-class"/>
     <input type="month" name="experience_till_date" id="experience_till_date" class="experience-tdate-class"/>
-    <input type="text" name="company name" id="company_name" class="company-name" placeholder="enter company name"/>
+    <input type="text" name="company name" id="company_name" class="company-name" placeholder="Enter company name"/>
     <button id="${flag}" onclick="removeExperience(this)">Clear</button>
     `;
   experienceDiv.id = `experience-data-${flag}`;
-  experienceDiv.insertAdjacentHTML('beforeend', template);
+  experienceDiv.insertAdjacentHTML('beforeend', experienceTemplate);
   experience_block.appendChild(experienceDiv);
 
 })
@@ -107,8 +107,7 @@ certificate_btn.addEventListener("click", () => {
         <input type="date" name="Certification_date" id="Certification_date" class="certificate-date-class"/>
         <input type="text" name="Certification_feild" id="Certification_feild" class="certificate-field-class"/>
         <input type="text" name="Certification_authority" id="Certification_authority" class="certificate-auth-class"/>
-        <button id="${count}" onclick="removeCertificate(this)">Clear</button>
-    `;
+        <button id="${count}" onclick="removeCertificate(this)">Clear</button>`;
   certificate_Div.id = `certificate-data-${count}`;
   certificate_Div.insertAdjacentHTML('beforeend', template);
   certificate_block.appendChild(certificate_Div);
@@ -140,22 +139,15 @@ template_btn2.addEventListener('click',() => {
 });
 
 //generate button
-let bool=true;
+let isButtonVisible=true;
 
-let fname_state = true;
-let lname_state = true;
-let email_state = true;
-let phone_state = true;
-let linkedin_state = true;
-let github_state = true;
-let address_state = true;
-let about_state = true;
+
 
 let generate_btn = document.getElementById("generate-btn");
 generate_btn.addEventListener("click", () => {
-  bool=true;
+  isButtonVisible=true;
   // validations();
-  if(bool===true){
+  if(isButtonVisible===true){
     local_storage();
   if(selected==1)
   goto_temp1();

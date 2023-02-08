@@ -1,58 +1,54 @@
 .personal input {
-    display: table-cell;
-    width: 300px;
-    padding: 3%;
-    margin-right: 45px;
+  display: table-cell;
+  width: 80%;
+  padding: 3%;
+  margin-right: 45px;
+  border: none;
 }
 
+td {
+  margin-right: 45px;
+}
 label {
-    display: table-cell;
-    size: 300px;
+  display: table-cell;
+  size: 300px;
+  padding-bottom: 10px;
 }
-
 textarea {
-    display: table-cell;
-}
-
-.Container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    background-color: aliceblue;
-    /* background-image: linear-gradient(to bottom right, rgb(123, 188, 249), rgb(119, 234, 111)); */
-    border-radius: 2%;
+  display: table-cell;
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* background-image:url("/Images/stars.jpg"); */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
+.row2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 .box {
-    display: inline-block;
-
+  max-width: 90%;
 }
-
 .box2 {
-    display: inline-block;
-    float: right;
-    margin-right: 13%;
+  max-width: 90%;
 }
-
 .box3 {
-    display: inline-block;
+  display: inline-block;
 }
-
 .per-details {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.about textarea {
-    width: 100%;
-    padding: 2%;
-    width: fit-content;
-}
+textarea {
+  width: 95%;
+  padding: 2%;
+  resize: none;
+  border: none;
 
+}
+#about-box {
+  width: 90%;
+  border-radius: 10px;
+}
 
 .education,
 .experience,
@@ -60,101 +56,153 @@ body {
 .personal,
 .about,
 .skills {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 
-/* .education input{
-    border-width: 1px;
-    width: 78%;
-    padding: 8px;
-} */
-.experience input{
-    width: 200px;
-    margin-right: 25px;
+.education input {
+  border: none;
+  width: 78%;
+  padding: 8px;
+  margin-top: 10px;
 }
 
-.experience input {
-    padding: 5px;
-}
-
-.Certification input{
-    width: 200px;
-    margin-right: 25px;
-}
-
+.experience input,
 .Certification input {
-    padding: 5px;
+  padding: 5px;
+  width: 200px;
+  margin-right: 25px;
+  margin-top: 10px;
+  border: none;
 }
 
 .remove {
-    background-color: transparent;
-    border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
-
 .Container {
-    border: black 2px solid;
-    box-shadow: 5px 5px 12px black;
-}
-
-#generate-btn {
-    margin-bottom: 2%;
-    ;
-    text-align: center;
-}
-
-#generate-btn button {
-    padding: 15px;
+  box-shadow: 0px 0px 50px #6c6c69;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #f2f2f2;
+  border-radius: 5px;
 }
 
 span {
-    color: red;
+  color: red;
+}
+th {
+  text-align: left;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 #select-templates {
-    margin-left: 10%;
-    padding-top: 2%;
-
+  margin-left: 10%;
+  padding-top: 2%;
 }
-
 #select-templates select,
 label {
-    font-size: larger;
+  font-size: 1em;
 }
-
-.skills input{
-    width: 200px;
-    margin-right: 25px;
+.skills input,
+label {
+  width: 200px;
+  margin-right: 25px;
 }
-
 .skills input {
-    padding: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
 }
 
 #formid {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
-
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
 }
-
 #formid button img {
-    width: 200px;
-    height: 300px;
+  /* width: 200px; */
+  height: 195px;
 }
 
 #t1:active {
-    background-color: black;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
-
 #t2:active {
-    background-color: black;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  background: #6cda96;
+  border: 0px;
+  text-align: center;
+  margin-top: 10px;
+}
+#t1 {
+  margin-right: 20px;
+  background: #f2f2f2;
+  border: none;
+}
+#t2 {
+  background: #f2f2f2;
+  border: none;
+}
+#generate-btn {
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-#education-table {
-    display: inline;
+#generate-btn button {
+  padding: 15px;
+  padding: 15px;
+  background: #6cda96;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  
+}
+.Certification button,
+.experience button,
+.education button,
+.skills button {
+  border-radius: 5px;
+  width: 78px;
+  height: 30px;
+}
+h1{
+  padding-top: 20px;
+}
+input{
+  border-radius: 5px;
+}
+
+#education-btn button{
+  display: inline;
+}
+@media (max-width:600px){
+  #formid{
+    display: grid;
+  }
+  #t1 {
+    margin-right: 0px;
+  }
+  #formid{
+    width: fit-content;
+    margin-left: 10px;
+  }
+}
+@media (max-width:1020px){
+  .row2{
+    grid-template-columns: none;
+
+  }
+
 }

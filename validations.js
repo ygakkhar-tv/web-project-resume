@@ -2,7 +2,6 @@
 function valid_email(email) {
   var mailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
   if (!mailFormat.test(email)) {
-    // alert("Invalid Email");
     focus_func(document.getElementById("email"));
     bool = false;
     document.getElementById("email").style.border = "1px solid red";
@@ -106,7 +105,6 @@ function validations() {
   //valid address
   const address = document.getElementById("address");
   if (address.value.length <= 0) {
-    // alert("Enter vaild address");
     focus_func(address);
     bool = false;
     address.style.border = "1px solid red";
@@ -136,7 +134,6 @@ function validations() {
   if (!college_name.value.match(clg) || college_name.value.length === 0) {
     focus_func(college_name);
     bool = false;
-
   } else {
     college_name.style.border = "1px solid black";
   }
