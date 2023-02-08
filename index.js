@@ -55,7 +55,7 @@ skill_btn.addEventListener('click', ()=>{
   length++;
 })
 
-document.getElementById("1001").style.display = "none";
+// document.getElementById("1001").style.display = "none";
 function removeSkill(button){
   if(button.id != 1001){
   let num2 = button.id;
