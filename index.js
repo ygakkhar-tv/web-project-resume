@@ -45,12 +45,12 @@ let skill_block = document.getElementById("skills-data-1");
 skill_btn.addEventListener('click', ()=>{
   let skill_div = document.createElement('div');
   skill_count = skill_count +1;
-  let template = `
+  let skillTemplate = `
   <input type="text" id="skill-name" class="skill-name" placeholder="Add skill here">
   <button id="${skill_count}" onclick="removeSkill(this)">Clear</button>
   `
   skill_div.id =`skill-data-${skill_count}`;
-  skill_div.insertAdjacentHTML('beforeend', template);
+  skill_div.insertAdjacentHTML('beforeend', skillTemplate);
   skill_block.appendChild(skill_div);
   length++;
 })
@@ -103,13 +103,13 @@ let certificate_block = document.getElementById("certificate-data-1");
 certificate_btn.addEventListener("click", () => {
   let certificate_Div = document.createElement("div");
   count = count + 1;
-  let template = `
+  let certificateTemplate = `
         <input type="date" name="Certification_date" id="Certification_date" class="certificate-date-class"/>
         <input type="text" name="Certification_feild" id="Certification_feild" class="certificate-field-class"/>
         <input type="text" name="Certification_authority" id="Certification_authority" class="certificate-auth-class"/>
         <button id="${count}" onclick="removeCertificate(this)">Clear</button>`;
   certificate_Div.id = `certificate-data-${count}`;
-  certificate_Div.insertAdjacentHTML('beforeend', template);
+  certificate_Div.insertAdjacentHTML('beforeend', certificateTemplate);
   certificate_block.appendChild(certificate_Div);
 })
 
