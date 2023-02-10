@@ -3,7 +3,7 @@ function valid_email(email) {
   var mailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
   if (!mailFormat.test(email)) {
     focus_func(document.getElementById("email"));
-    bool = false;
+    isButtonVisible = false;
     document.getElementById("email").style.border = "1px solid red";
     document.getElementById("email-para").style.visibility = "visible";
 
@@ -43,7 +43,7 @@ function validations() {
   var LName = /^[a-zA-Z]+[a-zA-Z]+$/;
   if (!l_name.value.match(LName) || l_name.value.length < 4) {
     focus_func(document.getElementById("lastName"));
-    bool = false;
+    isButtonVisible = false;
     document.getElementById("lastName").style.border = "1px solid red";
     document.getElementById("lname-para").style.visibility = "visible";
   }
@@ -68,7 +68,7 @@ function validations() {
   const Github = document.getElementById("github");
   if (Github.value === "") {
     focus_func(document.getElementById("github"));
-    bool = false;
+    isButtonVisible = false;
     document.getElementById("github").style.border = "1px solid red";
     document.getElementById("github-para").style.visibility = "visible";
   
@@ -91,7 +91,7 @@ function validations() {
     phone_num_value[0] != 9
   ) {
     focus_func(document.getElementById("phone"));
-    bool = false;
+    isButtonVisible = false;
     document.getElementById("phone").style.border = "1px solid red";
     document.getElementById("phone-para").style.visibility = "visible";
 
@@ -105,7 +105,7 @@ function validations() {
   const address = document.getElementById("address");
   if (address.value.length <= 0) {
     focus_func(address);
-    bool = false;
+    isButtonVisible = false;
     address.style.border = "1px solid red";
     document.getElementById("address_para").style.visibility = "visible";
 
@@ -118,7 +118,7 @@ function validations() {
   //valid introduction
   if (document.getElementById("aboutme").value.length <= 50 || document.getElementById("aboutme").value.length > 500) {
     focus_func(document.getElementById("aboutme"));
-    bool = false;
+    isButtonVisible = false;
     document.getElementById("aboutme").style.border = "1px solid red";
     document.getElementById("about-para").style.visibility = "visible";
   } 
@@ -132,7 +132,7 @@ function validations() {
   const clg = /^[a-zA-Z_ ]*$/;
   if (!college_name.value.match(clg) || college_name.value.length === 0) {
     focus_func(college_name);
-    bool = false;
+    isButtonVisible = false;
   } else {
     college_name.style.border = "1px solid black";
   }
@@ -140,7 +140,7 @@ function validations() {
   const degree_name = document.getElementById("degree-name");
   if (degree_name.value.length === 0) {
     focus_func(degree_name);
-    bool = false;
+    isButtonVisible = false;
   } else {
     degree_name.style.border = "1px solid black";
   }
@@ -148,7 +148,7 @@ function validations() {
   const passing_year = document.getElementById("year-name");
   if (passing_year.value.length === 0) {
     focus_func(passing_year);
-    bool = false;
+    isButtonVisible = false;
   } else {
     passing_year.style.border = "1px solid black";
   }
@@ -156,9 +156,8 @@ function validations() {
   const grades = document.getElementById("grades");
   if (grades.value.length === 0) {
     focus_func(grades);
-    bool = false;
+    isButtonVisible = false;
   } else {
     grades.style.border = "1px solid black";
   }
-  isButtonVisible=false;
 }
