@@ -21,16 +21,12 @@ education_btn.addEventListener("click", () => {
   educationDiv.insertAdjacentHTML('beforeend', educationTemplate);
   education_block.appendChild(educationDiv);
 });
-console.log(`eduction-count: ${educationCount}`);
-//clear button
-document.getElementById("10000").style.display = "none";
+
 function removeEducation(button) {
-  console.log("button :" + button.id);
   if (button.id !== 10000) {
     let num3 = button.id;
     let row3 = document.getElementById('education-data-' + num3);
     row3.remove();
-    console.log(button.id);
   }
 }
 
@@ -54,7 +50,6 @@ skill_btn.addEventListener('click', ()=>{
   length++;
 })
 
-// document.getElementById("1001").style.display = "none";
 function removeSkill(button){
   if(button.id != 1001){
   let num2 = button.id;
@@ -84,8 +79,6 @@ experience_btn.addEventListener("click", () => {
 
 })
 
-//clear button
-document.getElementById("100").style.display = "none";
 function removeExperience(button) {
   if (button.id !== 100) {
     let num = button.id;
@@ -112,7 +105,6 @@ certificate_btn.addEventListener("click", () => {
   certificate_block.appendChild(certificate_Div);
 })
 
-document.getElementById("1").style.display = "none";
 function removeCertificate(button) {
   if (button.id != 1) {
     let num = button.id;

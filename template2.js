@@ -42,7 +42,6 @@ document.getElementById("aboutme").innerHTML = `<p>${localStorage.getItem(
 
 //education
 let eduData = JSON.parse(localStorage.getItem("educationArr"));
-console.log(eduData);
 let tempEdu = document.getElementById("education-data");
 for (let i = 0; i < eduData.length; i++) {
   let eduDiv = document.createElement("div");

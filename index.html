@@ -152,8 +152,7 @@
           <label for="grades">Grades<span>&#42;</span></label>
           <input type="text" id="grades" class="grades-class" placeholder="Enter your grade" required />
         </div>
-        <button id="10000" class="remove" onclick="removeEducation(this)"> -->
-           Clear
+        <button id="10000" class="remove" onclick="removeEducation(this)" style="background-color: #999; color: rgb(0, 0, 0);" disabled>Clear
         </button>
       </div>
       <div class="btn" id="education-btn">
@@ -168,6 +167,8 @@
           <label for="skill-name"></label>
           <input type="text" id="skill-name" class="skill-name" placeholder="Add skill here" />
         </div>
+        <button id="1001" onclick="removeSkill(this)" style="background-color: #999; color: rgb(0, 0, 0);" disabled>
+         Clear</button>
       </div>
       <div class="btn" id="skills-btn">
         <button id="add_skills">Add</button>
@@ -190,7 +191,7 @@
           <input type="text" name="company name" id="company_name" class="company-name"
             placeholder="Enter company name" />
         </div>
-        <button id="100" class="remove" onclick="removeExperience(this)">
+        <button id="100" class="remove" onclick="removeExperience(this)" style="background-color: #999; color: rgb(0, 0, 0);" disabled>
           Clear
         </button>
       </div>
@@ -215,7 +216,7 @@
           <input type="text" name="Certification_authority" id="Certification_authority"
             class="certificate-auth-class" />
         </div>
-        <button id="1" class="remove" onclick="removeCertificate(this)">
+        <button id="1" class="remove" onclick="removeCertificate(this)" style="background-color: #999; color: rgb(0, 0, 0);" disabled>
           Clear
         </button>
       </div>

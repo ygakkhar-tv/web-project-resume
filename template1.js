@@ -1,6 +1,5 @@
 // personal info
 let personInfo = JSON.parse(localStorage.getItem("personalDetailsArray"));
-// console.log(personInfo);
 document.getElementById("FName").innerText = personInfo[0];
 document.getElementById("LName").innerText = " " + personInfo[1];
 document.getElementById("email").innerHTML = `<p id="email"><i class="fa-solid fa-envelope"></i>${personInfo[2]}</p>`;
@@ -69,7 +68,6 @@ if (experienceData[0].startDate != "") {
     tempExperience.appendChild(experienceDiv);
   }
 } else {
-  console.log(experienceData);
   let exp_div = document.getElementById("experience-details");
   exp_div.style.visibility = "hidden";
 }
