@@ -27,7 +27,6 @@ function focus_func(elem) {
 function validations() {
   //valid first name
   const f_name = document.getElementById("firstName");
-  console.log(`f_name: ${f_name.value}`);
   var FName = /^[a-zA-Z]+[a-zA-Z]+$/;
   if (!f_name.value.match(FName) || f_name.value.length < 4) {
     document.getElementById("fname-para").style.visibility = "visible";
